@@ -1,0 +1,715 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/weatherapp/services/weather.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/painting/decoration_image.dart', 'packages/flutter/src/painting/image_resolution.dart', 'packages/flutter/src/painting/box_fit.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/rendering/layer.dart', 'packages/flutter/src/widgets/safe_area.dart', 'packages/flutter/src/rendering/flex.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/material/page.dart', 'packages/weatherapp/screens/city_screen.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/weatherapp/constants.dart'], (function load__packages__weatherapp__screens__location_screen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__weatherapp__services__weather$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__painting__decoration_image$46dart, packages__flutter__src__painting__image_resolution$46dart, packages__flutter__src__painting__box_fit$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__rendering__layer$46dart, packages__flutter__src__widgets__safe_area$46dart, packages__flutter__src__rendering__flex$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__material__page$46dart, packages__weatherapp__screens__city_screen$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__weatherapp__constants$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _internal = dart_sdk._internal;
+  const _engine = dart_sdk._engine;
+  const ui = dart_sdk.ui;
+  const async = dart_sdk.async;
+  const _interceptors = dart_sdk._interceptors;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const navigator = packages__flutter__src__widgets__widget_span$46dart.src__widgets__navigator;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const weather = packages__weatherapp__services__weather$46dart.services__weather;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const text_button = packages__flutter__src__material__icon_button$46dart.src__material__text_button;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const decoration_image = packages__flutter__src__painting__decoration_image$46dart.src__painting__decoration_image;
+  const image_resolution = packages__flutter__src__painting__image_resolution$46dart.src__painting__image_resolution;
+  const box_fit = packages__flutter__src__painting__box_fit$46dart.src__painting__box_fit;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const box = packages__flutter__src__rendering__layer$46dart.src__rendering__box;
+  const safe_area = packages__flutter__src__widgets__safe_area$46dart.src__widgets__safe_area;
+  const flex = packages__flutter__src__rendering__flex$46dart.src__rendering__flex;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const page = packages__flutter__src__material__page$46dart.src__material__page;
+  const city_screen = packages__weatherapp__screens__city_screen$46dart.screens__city_screen;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const constants = packages__weatherapp__constants$46dart.constants;
+  var location_screen = Object.create(dart.library);
+  var $toInt = dartx.toInt;
+  dart._checkModuleNullSafetyMode(true);
+  var T = {
+    VoidTovoid: () => (T.VoidTovoid = dart.constFn(dart.fnType(dart.void, [])))(),
+    FutureOfvoid: () => (T.FutureOfvoid = dart.constFn(async.Future$(dart.void)))(),
+    VoidToFutureOfvoid: () => (T.VoidToFutureOfvoid = dart.constFn(dart.fnType(T.FutureOfvoid(), [])))(),
+    BuildContextToCityScreen: () => (T.BuildContextToCityScreen = dart.constFn(dart.fnType(city_screen.CityScreen, [framework.BuildContext])))(),
+    JSArrayOfWidget: () => (T.JSArrayOfWidget = dart.constFn(_interceptors.JSArray$(framework.Widget)))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 29,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 23,
+        [_Location_line]: 79,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2, C[3] || CT.C3], widget_inspector._Location);
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 21,
+        [_Location_line]: 73,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 77,
+        [_Location_file]: null
+      });
+    },
+    get C5() {
+      return C[5] = dart.constList([C[6] || CT.C6, C[7] || CT.C7], widget_inspector._Location);
+    },
+    get C4() {
+      return C[4] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[5] || CT.C5,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 72,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C9() {
+      return C[9] = dart.constList([], widget_inspector._Location);
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[9] || CT.C9,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 88,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 29,
+        [_Location_line]: 99,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "size",
+        [_Location_column]: 23,
+        [_Location_line]: 100,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12, C[13] || CT.C13], widget_inspector._Location);
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 28,
+        [_Location_line]: 98,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 21,
+        [_Location_line]: 83,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 21,
+        [_Location_line]: 98,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17], widget_inspector._Location);
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 19,
+        [_Location_line]: 82,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 17,
+        [_Location_line]: 70,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 17,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], widget_inspector._Location);
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 69,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 37,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 111,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.constList([C[24] || CT.C24, C[25] || CT.C25], widget_inspector._Location);
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[23] || CT.C23,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 109,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 114,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 115,
+        [_Location_file]: null
+      });
+    },
+    get C27() {
+      return C[27] = dart.constList([C[28] || CT.C28, C[29] || CT.C29], widget_inspector._Location);
+    },
+    get C26() {
+      return C[26] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[27] || CT.C27,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 113,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 108,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.constList([C[32] || CT.C32], widget_inspector._Location);
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[31] || CT.C31,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 107,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 17,
+        [_Location_line]: 106,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 107,
+        [_Location_file]: null
+      });
+    },
+    get C34() {
+      return C[34] = dart.constList([C[35] || CT.C35, C[36] || CT.C36], widget_inspector._Location);
+    },
+    get C33() {
+      return C[33] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[34] || CT.C34,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 105,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C39() {
+      return C[39] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 49,
+        [_Location_line]: 123,
+        [_Location_file]: null
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "textAlign",
+        [_Location_column]: 19,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 19,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C38() {
+      return C[38] = dart.constList([C[39] || CT.C39, C[40] || CT.C40, C[41] || CT.C41], widget_inspector._Location);
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[38] || CT.C38,
+        [_Location_name]: null,
+        [_Location_column]: 24,
+        [_Location_line]: 122,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C44() {
+      return C[44] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 17,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 17,
+        [_Location_line]: 122,
+        [_Location_file]: null
+      });
+    },
+    get C43() {
+      return C[43] = dart.constList([C[44] || CT.C44, C[45] || CT.C45], widget_inspector._Location);
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[43] || CT.C43,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 120,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C48() {
+      return C[48] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "mainAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 66,
+        [_Location_file]: null
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "crossAxisAlignment",
+        [_Location_column]: 13,
+        [_Location_line]: 67,
+        [_Location_file]: null
+      });
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 13,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C47() {
+      return C[47] = dart.constList([C[48] || CT.C48, C[49] || CT.C49, C[50] || CT.C50], widget_inspector._Location);
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[47] || CT.C47,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 65,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 11,
+        [_Location_line]: 65,
+        [_Location_file]: null
+      });
+    },
+    get C52() {
+      return C[52] = dart.constList([C[53] || CT.C53], widget_inspector._Location);
+    },
+    get C51() {
+      return C[51] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[52] || CT.C52,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 64,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C56() {
+      return C[56] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 9,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "constraints",
+        [_Location_column]: 9,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C55() {
+      return C[55] = dart.constList([C[56] || CT.C56, C[57] || CT.C57, C[58] || CT.C58], widget_inspector._Location);
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[55] || CT.C55,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 54,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C60() {
+      return C[60] = dart.constList([C[61] || CT.C61], widget_inspector._Location);
+    },
+    get C59() {
+      return C[59] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[60] || CT.C60,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 53,
+        [_Location_file]: "file:///D:/Flutter%20project/weatherapp/lib/screens/location_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(62).fill(void 0);
+  var I = ["package:weatherapp/screens/location_screen.dart"];
+  var locationweather$ = dart.privateName(location_screen, "LocationScreen.locationweather");
+  location_screen.LocationScreen = class LocationScreen extends framework.StatefulWidget {
+    get locationweather() {
+      return this[locationweather$];
+    }
+    set locationweather(value) {
+      super.locationweather = value;
+    }
+    createState() {
+      return new location_screen._LocationScreenState.new();
+    }
+  };
+  (location_screen.LocationScreen.new = function(opts) {
+    let locationweather = opts && 'locationweather' in opts ? opts.locationweather : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[locationweather$] = locationweather;
+    location_screen.LocationScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = location_screen.LocationScreen.prototype;
+  dart.addTypeTests(location_screen.LocationScreen);
+  dart.addTypeCaches(location_screen.LocationScreen);
+  dart.setMethodSignature(location_screen.LocationScreen, () => ({
+    __proto__: dart.getMethods(location_screen.LocationScreen.__proto__),
+    createState: dart.fnType(location_screen._LocationScreenState, [])
+  }));
+  dart.setLibraryUri(location_screen.LocationScreen, I[0]);
+  dart.setFieldSignature(location_screen.LocationScreen, () => ({
+    __proto__: dart.getFields(location_screen.LocationScreen.__proto__),
+    locationweather: dart.finalFieldType(dart.dynamic)
+  }));
+  var ___LocationScreenState_temperature = dart.privateName(location_screen, "_#_LocationScreenState#temperature");
+  var ___LocationScreenState_weatherIcon = dart.privateName(location_screen, "_#_LocationScreenState#weatherIcon");
+  var ___LocationScreenState_cityName = dart.privateName(location_screen, "_#_LocationScreenState#cityName");
+  var ___LocationScreenState_weatherMessgae = dart.privateName(location_screen, "_#_LocationScreenState#weatherMessgae");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  location_screen._LocationScreenState = class _LocationScreenState extends framework.State$(location_screen.LocationScreen) {
+    get temperature() {
+      let t0;
+      t0 = this[___LocationScreenState_temperature];
+      return t0 == null ? dart.throw(new _internal.LateError.fieldNI("temperature")) : t0;
+    }
+    set temperature(t0) {
+      this[___LocationScreenState_temperature] = t0;
+    }
+    get weatherIcon() {
+      let t1;
+      t1 = this[___LocationScreenState_weatherIcon];
+      return t1 == null ? dart.throw(new _internal.LateError.fieldNI("weatherIcon")) : t1;
+    }
+    set weatherIcon(t1) {
+      this[___LocationScreenState_weatherIcon] = t1;
+    }
+    get cityName() {
+      let t2;
+      t2 = this[___LocationScreenState_cityName];
+      return t2 == null ? dart.throw(new _internal.LateError.fieldNI("cityName")) : t2;
+    }
+    set cityName(t2) {
+      this[___LocationScreenState_cityName] = t2;
+    }
+    get weatherMessgae() {
+      let t3;
+      t3 = this[___LocationScreenState_weatherMessgae];
+      return t3 == null ? dart.throw(new _internal.LateError.fieldNI("weatherMessgae")) : t3;
+    }
+    set weatherMessgae(t3) {
+      this[___LocationScreenState_weatherMessgae] = t3;
+    }
+    initState() {
+      super.initState();
+      this.updateUi(this.widget.locationweather);
+    }
+    updateUi(weatherData) {
+      this.setState(dart.fn(() => {
+        if (weatherData == null) {
+          this.temperature = 0;
+          this.weatherIcon = "Error";
+          this.weatherMessgae = "Unable to get weather data";
+          this.cityName = "";
+          return;
+        }
+        let temp = core.double.as(dart.dsend(dart.dsend(weatherData, '_get', ["main"]), '_get', ["temp"]));
+        this.temperature = temp[$toInt]();
+        let condition = dart.dsend(dart.dsend(dart.dsend(weatherData, '_get', ["weather"]), '_get', [0]), '_get', ["id"]);
+        this.weatherIcon = this.weather.getWeatherIcon(core.int.as(condition));
+        this.weatherMessgae = this.weather.getMessage(this.temperature);
+        this.cityName = core.String.as(dart.dsend(weatherData, '_get', ["name"]));
+      }, T.VoidTovoid()));
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({body: new container.Container.new({decoration: new box_decoration.BoxDecoration.new({image: new decoration_image.DecorationImage.new({image: new image_resolution.AssetImage.new("images/night.png"), fit: box_fit.BoxFit.cover, colorFilter: new _engine._CkBlendModeColorFilter.new(colors.Colors.white.withOpacity(0.8), ui.BlendMode.dstATop)})}), constraints: new box.BoxConstraints.expand(), child: new safe_area.SafeArea.new({child: new basic.Column.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, crossAxisAlignment: flex.CrossAxisAlignment.stretch, children: T.JSArrayOfWidget().of([new basic.Row.new({mainAxisAlignment: flex.MainAxisAlignment.spaceBetween, children: T.JSArrayOfWidget().of([new text_button.TextButton.new({onPressed: dart.fn(() => async.async(dart.void, (function*() {
+                        let weatherData = (yield this.weather.getLocationWeather());
+                        this.updateUi(weatherData);
+                      }).bind(this)), T.VoidToFutureOfvoid()), child: new icon.Icon.new(icons.Icons.near_me, {size: 40.0, $creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[4] || CT.C4}), new text_button.TextButton.new({onPressed: dart.fn(() => async.async(dart.void, (function*() {
+                        let typeName = (yield navigator.Navigator.push(dart.dynamic, context, new page.MaterialPageRoute.new({builder: dart.fn(context => new city_screen.CityScreen.new({$creationLocationd_0dea112b090073317d4: C[8] || CT.C8}), T.BuildContextToCityScreen())})));
+                        if (typeName != null) {
+                          let weatherData = (yield this.weather.getCityWeather(core.String.as(typeName)));
+                          this.updateUi(weatherData);
+                        }
+                        ;
+                      }).bind(this)), T.VoidToFutureOfvoid()), child: new icon.Icon.new(icons.Icons.location_city_outlined, {size: 40.0, $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), $creationLocationd_0dea112b090073317d4: C[14] || CT.C14})]), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18}), new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({left: 15.0}), child: new basic.Row.new({children: T.JSArrayOfWidget().of([new text.Text.new(dart.str(this.temperature), {style: constants.kTempTextStyle, $creationLocationd_0dea112b090073317d4: C[22] || CT.C22}), new text.Text.new(this.weatherIcon, {style: constants.kConditionTextStyle, $creationLocationd_0dea112b090073317d4: C[26] || CT.C26})]), $creationLocationd_0dea112b090073317d4: C[30] || CT.C30}), $creationLocationd_0dea112b090073317d4: C[33] || CT.C33}), new basic.Padding.new({padding: new edge_insets.EdgeInsets.only({right: 15.0, bottom: 50.0}), child: new text.Text.new(this.weatherMessgae + " in " + this.cityName, {textAlign: ui.TextAlign.right, style: constants.kMessageTextStyle, $creationLocationd_0dea112b090073317d4: C[37] || CT.C37}), $creationLocationd_0dea112b090073317d4: C[42] || CT.C42})]), $creationLocationd_0dea112b090073317d4: C[46] || CT.C46}), $creationLocationd_0dea112b090073317d4: C[51] || CT.C51}), $creationLocationd_0dea112b090073317d4: C[54] || CT.C54}), $creationLocationd_0dea112b090073317d4: C[59] || CT.C59});
+    }
+  };
+  (location_screen._LocationScreenState.new = function() {
+    this.weather = new weather.WeatherModel.new();
+    this[___LocationScreenState_temperature] = null;
+    this[___LocationScreenState_weatherIcon] = null;
+    this[___LocationScreenState_cityName] = null;
+    this[___LocationScreenState_weatherMessgae] = null;
+    location_screen._LocationScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = location_screen._LocationScreenState.prototype;
+  dart.addTypeTests(location_screen._LocationScreenState);
+  dart.addTypeCaches(location_screen._LocationScreenState);
+  dart.setMethodSignature(location_screen._LocationScreenState, () => ({
+    __proto__: dart.getMethods(location_screen._LocationScreenState.__proto__),
+    updateUi: dart.fnType(dart.void, [dart.dynamic]),
+    build: dart.fnType(framework.Widget, [framework.BuildContext])
+  }));
+  dart.setGetterSignature(location_screen._LocationScreenState, () => ({
+    __proto__: dart.getGetters(location_screen._LocationScreenState.__proto__),
+    temperature: core.int,
+    weatherIcon: core.String,
+    cityName: core.String,
+    weatherMessgae: core.String
+  }));
+  dart.setSetterSignature(location_screen._LocationScreenState, () => ({
+    __proto__: dart.getSetters(location_screen._LocationScreenState.__proto__),
+    temperature: core.int,
+    weatherIcon: core.String,
+    cityName: core.String,
+    weatherMessgae: core.String
+  }));
+  dart.setLibraryUri(location_screen._LocationScreenState, I[0]);
+  dart.setFieldSignature(location_screen._LocationScreenState, () => ({
+    __proto__: dart.getFields(location_screen._LocationScreenState.__proto__),
+    weather: dart.fieldType(weather.WeatherModel),
+    [___LocationScreenState_temperature]: dart.fieldType(dart.nullable(core.int)),
+    [___LocationScreenState_weatherIcon]: dart.fieldType(dart.nullable(core.String)),
+    [___LocationScreenState_cityName]: dart.fieldType(dart.nullable(core.String)),
+    [___LocationScreenState_weatherMessgae]: dart.fieldType(dart.nullable(core.String))
+  }));
+  dart.trackLibraries("packages/weatherapp/screens/location_screen.dart", {
+    "package:weatherapp/screens/location_screen.dart": location_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["location_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IASQ;;;;;;;AAGgC;IAAsB;;;QALvC;;;AAArB;;EAAsC;;;;;;;;;;;;;;;;;;;;;;;;AAW7B;;IAAW;;AAAX;IAAW;;;AACR;;IAAW;;AAAX;IAAW;;;AACX;;IAAQ;;AAAR;IAAQ;;;AACR;;IAAc;;AAAd;IAAc;;AAIP,MAAX;AAE0B,MAAhC,cAAS,AAAO;IAClB;aAEsB;AAiBlB,MAhBF,cAAS;AACP,YAAI,AAAY,WAAD;AACE,UAAf,mBAAc;AACO,UAArB,mBAAc;AAC+B,UAA7C,sBAAiB;AACJ,UAAb,gBAAW;AACX;;AAEK,kCAA0B,WAAR,WAAX,WAAW,WAAC,mBAAQ;AACR,QAA1B,mBAAc,AAAK,IAAD;AAEd,wBAAqC,WAAH,WAAX,WAAX,WAAW,WAAC,sBAAW,cAAG;AACK,QAA/C,mBAAc,AAAQ,wCAAe,SAAS;AACE,QAAhD,sBAAiB,AAAQ,wBAAW;AAEN,wBAA9B,eAAsB,WAAX,WAAW,WAAC;;IAE3B;UAG0B;AACxB,YAAO,kCACC,yCACQ,6CACH,iDACE,oCAAW,0BACN,mCACa,wCACd,AAAM,gCAAY,MAAgB,wCAGrB,wCACrB,mCACE,yCACgC,yDACE,2CACrB,wBAChB,sCACuC,+CACnB,wBAChB,2CACa;AACL,2CAAc,MAAM,AAAQ;AACX,wBAArB,cAAS,WAAW;sBACrB,gDACM,kBACC,4BACA,wHAGV,2CACa;AACL,wCAAW,MAAgB,uCAC7B,OAAO,EACP,yCACW,QAAC,WACD;AAIb,4BAAG,QAAQ;AACL,6CAAc,MAAM,AAAQ,2CAAe,QAAQ;AAClC,0BAArB,cAAS,WAAW;;AAErB;sBACF,gDACM,kBACC,2CACA,yLAKd,gCACsB,uCAAW,eACxB,6BACa,wBAChB,kBACgB,SAAZ,2BACK,qFAET,kBACE,0BACO,kNAKf,gCACsB,wCAAY,cAAc,eACvC,kBACH,AAA4B,sBAAd,SAAK,2BACA,2BACd;IAQvB;;;IAnHa,eAAU;+CACd;+CACG;4CACA;kDACA;;;EAgHd","file":"../../../../packages/weatherapp/screens/location_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__location_screen: location_screen
+  };
+}));
+
+//# sourceMappingURL=location_screen.dart.lib.js.map
